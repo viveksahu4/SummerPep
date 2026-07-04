@@ -1,4 +1,4 @@
-#include<bits/stdc++.h> // 1 2 3 4 5 
+#include<bits/stdc++.h> // 9 5 1 2 3
 using namespace std;
 int main(){
     int n;
@@ -7,28 +7,25 @@ int main(){
     for(int i=0;i<n;i++){
         cin>>arr[i];
     }
-
+    
     int largest = INT_MIN;
     int secondlargest = INT_MIN;
-
+    
     for(int i=0;i<n;i++){
         if(arr[i] > largest){
             secondlargest = largest;
             largest = arr[i];
         }
-        else if(arr[i] > secondlargest && arr[i] != largest){
+        else if(arr[i] < largest && arr[i] > secondlargest){
             secondlargest = arr[i];
         }
+        
     }
-
-
-    if(secondlargest == INT_MIN){
-        cout<<"No second largest element";
-    }
-    else{
+    
+    if(secondlargest == INT_MIN)
+        cout<<"Second largest not found";
+    else
         cout<<secondlargest;
-    }
-
-    return 0;
-
+    
+    
 }
