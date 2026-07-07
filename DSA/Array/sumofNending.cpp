@@ -4,7 +4,7 @@ int main(){
     int n;
     cin>>n;
     int sum = 0;
-    int avg;
+    int Avg;
     int count  = 0;
 
     for(int i=1;i<=50;i++){
@@ -15,6 +15,6 @@ int main(){
             count++;
         }
     }
-
-    cout<<count;
+    Avg = sum / count;
+    cout<<Avg;
 }
