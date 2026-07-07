@@ -4,14 +4,17 @@ int main(){
     int n;
     cin>>n;
     int sum = 0;
+    int avg;
+    int count  = 0;
 
     for(int i=1;i<=50;i++){
         int digit = i % 10;
 
         if(digit == n){
             sum += i;
+            count++;
         }
     }
 
-    cout<<sum;
+    cout<<count;
 }
